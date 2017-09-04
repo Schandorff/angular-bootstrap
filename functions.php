@@ -102,7 +102,11 @@ function _tk_scripts() {
 wp_enqueue_script('angularjs', get_template_directory_uri() .'/node_modules/angular/angular.min.js');
 wp_enqueue_script('angularjs-route', get_template_directory_uri() .'/node_modules/angular-route/angular-route.min.js');
 wp_enqueue_script('scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'angularjs', 'angularjs-route' ));
-
+wp_localize_script('scripts', 'localized',
+            array(
+                'partials' => 'http://localhost:8888/simonsl/wp-content/themes/angular-bootstrap/partials/'
+                )
+    );
 	// Import the necessary TK Bootstrap WP CSS additions
 	wp_enqueue_style( '_tk-bootstrap-wp', THEME_DIR_URI . '/includes/css/bootstrap-wp.css' );
 

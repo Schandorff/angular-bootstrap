@@ -7,8 +7,9 @@
  * @package _tk
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> ng-app="wp">
 <head>
+	<base href="/">
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -62,7 +63,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-	
+
 						<!-- Your site title as branding in the menu -->
 						<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 					</div>
@@ -93,4 +94,3 @@
 	<div class="container">
 		<div class="row">
 			<div id="content" class="main-content-inner col-sm-12 col-md-8">
-

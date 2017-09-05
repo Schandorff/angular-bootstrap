@@ -4,7 +4,6 @@
  */
 ?>
 
-
 <?php // Styling Tip!
 
 // Want to wrap for example the post content in blog listings with a thin outline in Bootstrap style?

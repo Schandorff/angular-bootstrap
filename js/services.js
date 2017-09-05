@@ -29,16 +29,14 @@ function ThemeService($http) {
 		}
 
 		//Get the category terms from wp-json
-		return $http.get('wp-json/taxonomies/category/terms').success(function(res){
-			ThemeService.categories = res;
-			console.log(ThemeService.categories);
+		return $http.get('simonsl/wp-json/wp/v2/categories/').then(function(res){
+			ThemeService.categories = res.data;
 		});
 	};
 
 	ThemeService.getPosts = function(page) {
-		return $http.get('wp-json/posts/?page=' + page + '&filter[posts_per_page]=1').success(function(res, status, headers){
-			ThemeService.posts = res;
-			console.log(ThemeService.posts);
+		return $http.get('simonsl/wp-json/wp/v2/posts/?page=' + page + '&filter[posts_per_page]=1').then(function(res, status, headers){
+			ThemeService.posts = res.data;
 			page = parseInt(page);
 
 			// Check page variable for sanity

@@ -107,6 +107,7 @@ wp_localize_script('scripts', 'localized',
                 'partials' => 'http://localhost:8888/simonsl/wp-content/themes/angular-bootstrap/partials/'
                 )
     );
+
     wp_enqueue_script('angularjs-sanitize', get_stylesheet_directory_uri() . '/node_modules/angular-sanitize/angular-sanitize.min.js');
     wp_enqueue_script('theme-service', get_stylesheet_directory_uri() . '/js/services.js');
 	// Import the necessary TK Bootstrap WP CSS additions

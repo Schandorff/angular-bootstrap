@@ -1,6 +1,5 @@
 var app = angular.module('wp', ['ngRoute', 'ngSanitize']);
 
-angular.module('wp', ['ngRoute'])
 app.config(function($routeProvider, $locationProvider) {
 
     $routeProvider
@@ -25,7 +24,7 @@ app.controller('Main', ['$scope', '$http', 'ThemeService', function($scope, $htt
     ThemeService.getPosts(1);
 
     $scope.data = ThemeService;
-    console.log(ThemeService);
+
 
 }]);
 

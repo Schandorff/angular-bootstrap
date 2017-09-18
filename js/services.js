@@ -11,7 +11,7 @@ function ThemeService($http) {
 
 	//Set the page title in the <title> tag
 	function _setTitle(documentTitle, pageTitle) {
-		document.querySelector('title').innerHTML = documentTitle + ' | AngularJS Demo Theme';
+		document.querySelector('title').innerHTML = documentTitle + ' | Simon SL';
 		ThemeService.pageTitle = pageTitle;
 	}
 
@@ -34,8 +34,9 @@ function ThemeService($http) {
 		});
 	};
 
+
 	ThemeService.getPosts = function(page) {
-		return $http.get('simonsl/wp-json/wp/v2/posts/?page=' + page + '&filter[posts_per_page]=1').then(function(res, status, headers){
+		return $http.get('simonsl/wp-json/wp/v2/posts/?page=' + page + '&filter[posts_per_page]=5').then(function(res, status, headers){
 			ThemeService.posts = res.data;
 			page = parseInt(page);
 

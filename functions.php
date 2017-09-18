@@ -99,6 +99,7 @@ add_action( 'widgets_init', '_tk_widgets_init' );
 function _tk_scripts() {
 
   //Load angular
+  wp_enqueue_script('particles', get_template_directory_uri() .'/js/particles.js');
 wp_enqueue_script('angularjs', get_template_directory_uri() .'/node_modules/angular/angular.min.js');
 wp_enqueue_script('angularjs-route', get_template_directory_uri() .'/node_modules/angular-route/angular-route.min.js');
 wp_enqueue_script('scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'angularjs', 'angularjs-route' ));
@@ -178,3 +179,5 @@ add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );

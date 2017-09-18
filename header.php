@@ -20,10 +20,24 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 	<?php wp_head(); ?>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+	<script>jQuery(function() {
+	  jQuery('a').on('click', function(e) {
+	    e.preventDefault();
+	    jQuery('html, body').animate({ scrollTop: jQuery(jQuery(this).attr('href')).offset().top}, 500, 'linear');
+	  });
+	});</script>
 </head>
 
 <body <?php body_class(); ?>>
 	<?php do_action( 'before' ); ?>
+	<section class="block">
+		<div id="particles-js" class="container-full canvasParticles"
+
+		<script src="simonsl/wp-content/themes/angular-bootstrap/js/particles.js"></script>
 
 <header id="masthead" class="site-header" role="banner">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
@@ -85,10 +99,13 @@
 
 				</div><!-- .navbar -->
 			</div>
+
 		</div>
 	</div><!-- .container -->
 </nav><!-- .site-navigation -->
-
+<div class="canvasScroll"><a href="#content"><span></span>Scroll</a></div>
+</div>
+</section>
 <div class="main-content">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
 	<div class="container">

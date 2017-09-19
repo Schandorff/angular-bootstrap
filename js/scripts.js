@@ -49,7 +49,6 @@ app.controller('Category', ['$scope', '$http', '$routeParams', function($scope, 
         }
     ]
 );
-
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 particlesJS.load('particles-js', 'simonsl/wp-content/themes/angular-bootstrap/js/particles.json', function() {
   console.log('callback - particles.js config loaded');

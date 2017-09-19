@@ -20,57 +20,48 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 	<?php wp_head(); ?>
-	<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-	<script>jQuery(function() {
-	  jQuery('a').on('click', function(e) {
-	    e.preventDefault();
-	    jQuery('html, body').animate({ scrollTop: jQuery(jQuery(this).attr('href')).offset().top}, 500, 'linear');
-	  });
-	});</script>
 </head>
 
 <body <?php body_class(); ?>>
 	<?php do_action( 'before' ); ?>
+
 	<section class="block">
-		<div id="particles-js" class="container-full canvasParticles"
 
-		<script src="simonsl/wp-content/themes/angular-bootstrap/js/particles.js"></script>
+	<div id="particles-js" class="container-full canvasParticles">
 
-<header id="masthead" class="site-header" role="banner">
-<?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container">
-		<div class="row">
-			<div class="site-header-inner col-sm-12">
-
-				<?php $header_image = get_header_image();
-				if ( ! empty( $header_image ) ) { ?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-					</a>
-				<?php } // end if ( ! empty( $header_image ) ) ?>
-
-
-				<div class="site-branding">
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<p class="site-description lead"><?php bloginfo( 'description' ); ?></p>
-				</div>
-
-			</div>
-		</div>
-	</div><!-- .container -->
-</header><!-- #masthead -->
+	<script src="simonsl/wp-content/themes/angular-bootstrap/js/particles.js"></script>
 
 <nav class="site-navigation">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container">
+	<div class="container-fluid navContainer">
 		<div class="row">
 			<div class="site-navigation-inner col-sm-12">
-				<div class="navbar navbar-default">
+				<div class="navbar navbar-default siteNav">
 					<div class="navbar-header">
 						<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+						<header id="masthead" class="site-header" role="banner">
+						<?php // substitute the class "container-fluid" below if you want a wider content area ?>
+							<div class="container-fluid">
+								<div class="row">
+									<div class="site-header-inner col-sm-12">
+
+										<?php $header_image = get_header_image();
+										if ( ! empty( $header_image ) ) { ?>
+											<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+												<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+											</a>
+										<?php } // end if ( ! empty( $header_image ) ) ?>
+
+
+										<div class="site-branding">
+											<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+											<p class="site-description lead"><?php bloginfo( 'description' ); ?></p>
+										</div>
+
+									</div>
+								</div>
+							</div><!-- .container -->
+						</header><!-- #masthead -->
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
 							<span class="sr-only"><?php _e('Toggle navigation','_tk') ?> </span>
 							<span class="icon-bar"></span>
@@ -103,11 +94,11 @@
 		</div>
 	</div><!-- .container -->
 </nav><!-- .site-navigation -->
-<div class="canvasScroll"><a href="#content"><span></span>Scroll</a></div>
+<a class="canvasScroll" href="#content"><span></span>Scroll</a>
 </div>
 </section>
 <div class="main-content">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container">
+	<div class="container-full">
 		<div class="row">
-			<div id="content" class="main-content-inner col-sm-12 col-md-8">
+			<div id="content" class="main-content-inner col-sm-12 col-md-12">

@@ -99,6 +99,9 @@ add_action( 'widgets_init', '_tk_widgets_init' );
 function _tk_scripts() {
 
   //Load angular
+
+  wp_enqueue_script('jQuery', 'https://code.jquery.com/jquery-3.2.1.min.js');
+  wp_enqueue_script('randScripts', get_template_directory_uri() .'/js/randScripts.js');
   wp_enqueue_script('particles', get_template_directory_uri() .'/js/particles.js');
 wp_enqueue_script('angularjs', get_template_directory_uri() .'/node_modules/angular/angular.min.js');
 wp_enqueue_script('angularjs-route', get_template_directory_uri() .'/node_modules/angular-route/angular-route.min.js');

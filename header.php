@@ -24,12 +24,10 @@
 
 <body <?php body_class(); ?>>
 	<?php do_action( 'before' ); ?>
-
-	<section class="block">
-
 	<div id="particles-js" class="container-full canvasParticles">
-
 	<script src="simonsl/wp-content/themes/angular-bootstrap/js/particles.js"></script>
+	<!--<a class="canvasScroll" href="#content"><span></span>Scroll</a>-->
+	</div>
 
 <nav class="site-navigation">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
@@ -53,10 +51,7 @@
 										<?php } // end if ( ! empty( $header_image ) ) ?>
 
 
-										<div class="site-branding">
-											<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-											<p class="site-description lead"><?php bloginfo( 'description' ); ?></p>
-										</div>
+
 
 									</div>
 								</div>
@@ -94,9 +89,6 @@
 		</div>
 	</div><!-- .container -->
 </nav><!-- .site-navigation -->
-<a class="canvasScroll" href="#content"><span></span>Scroll</a>
-</div>
-</section>
 <div class="main-content">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
 	<div class="container-full">

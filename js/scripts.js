@@ -1,4 +1,4 @@
-var app = angular.module('wp', ['ngRoute', 'ngSanitize']);
+var app = angular.module('wp', ['ngRoute', 'ngSanitize', 'ngAnimate']);
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$locationProvider.html5Mode(true);
@@ -30,13 +30,14 @@ app.controller('Main', ['$scope', '$http', 'ThemeService', function($scope, $htt
 
     $scope.data = ThemeService;
 
+
 }]);
 
 app.controller('Content', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
-            $http.get('simonsl/wp-json/wp/v2/posts/?filter[name]=' + $routeParams.slug).then(function(res){
+            $http.get('simonsl/wp-json/wp/v2/pages/?filter[name]=' + $routeParams.slug).then(function(res){
                 $scope.post = res.data[0];
 
-                  console.log(res);
+                  console.log($scope);
             });
         }
     ]
@@ -50,6 +51,7 @@ app.controller('Category', ['$scope', '$http', '$routeParams', function($scope, 
     ]
 );
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+
 particlesJS.load('particles-js', 'simonsl/wp-content/themes/angular-bootstrap/js/particles.json', function() {
-  console.log('callback - particles.js config loaded');
+	console.log('callback - particles.js config loaded');
 });

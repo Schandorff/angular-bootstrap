@@ -41,7 +41,7 @@ function ThemeService($http) {
 			page = parseInt(page);
 
 			// Check page variable for sanity
-			if ( isNaN(page) || page > headers('X-WP-TotalPages') ) {
+			/*if ( isNaN(page) || page > headers('X-WP-TotalPages') ) {
 				_setTitle('Page Not Found', 'Page Not Found');
 			} else {
 				//Deal with pagination
@@ -53,7 +53,7 @@ function ThemeService($http) {
 
 				_setArchivePage(res,page,headers);
 
-			}
+			}*/
 		});
 	};
 

@@ -1,10 +1,14 @@
-var app = angular.module('wp', ['ngRoute', 'ngSanitize', 'ngAnimate']);
+var app = angular.module('wp', ['ngRoute', 'ngSanitize', 'ngLoadingSpinner', 'ngAnimate']);
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$locationProvider.html5Mode(true);
 
 	$routeProvider
-      .when('/simonsl', {
+			.when('/simonsl', {
+		templateUrl: localized.partials + 'home.html',
+		controller: 'Home'
+		})
+      .when('/simonsl/posts', {
         templateUrl: localized.partials + 'main.html',
         controller: 'Main'
     })
@@ -20,6 +24,15 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
         redirectTo: '/'
     });
 }]);
+
+app.controller('Home', ['$scope', '$http', function($scope, $http) {
+            $http.get('simonsl/wp-json/wp/v2/pages/?filter[name]=forside').then(function(res){
+								$scope.post = res.data[0];
+
+            });
+        }
+    ]
+);
 //Main controller
 app.controller('Main', ['$scope', '$http', 'ThemeService', function($scope, $http, ThemeService) {
     //Get Categories from ThemeService
@@ -35,9 +48,8 @@ app.controller('Main', ['$scope', '$http', 'ThemeService', function($scope, $htt
 
 app.controller('Content', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
             $http.get('simonsl/wp-json/wp/v2/pages/?filter[name]=' + $routeParams.slug).then(function(res){
-                $scope.post = res.data[0];
+								$scope.post = res.data[0];
 
-                  console.log($scope);
             });
         }
     ]

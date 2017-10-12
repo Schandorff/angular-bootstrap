@@ -58,13 +58,13 @@ body {
 @media (min-width: 992px){
 
 .navmenu{
-	width: auto;
+	width: 6vw;
 }
 .navbar-toggle{
 	display: none;
 }
 .main-content{
-	padding-left: 117px;
+padding-left: 6vw;
 }
 }
 @media (max-width: 992px){

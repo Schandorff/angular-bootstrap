@@ -20,8 +20,8 @@
 	<?php wp_head(); ?>
 
  <script type="text/javascript" src="http://fgnass.github.io/spin.js/spin.min.js"></script>
- 	<script type="text/javascript" src="http://localhost:8888/simonsl/wp-content/themes/angular-bootstrap/node_modules/angular-spinner/angular-spinner.js"></script>
- 	<script type="text/javascript" src="http://localhost:8888/simonsl/wp-content/themes/angular-bootstrap/node_modules/angular-loading-spinner/angular-loading-spinner.js"></script>
+ 	<script type="text/javascript" src="/simonsl/wp-content/themes/angular-bootstrap/node_modules/angular-spinner/angular-spinner.js"></script>
+ 	<script type="text/javascript" src="/simonsl/wp-content/themes/angular-bootstrap/node_modules/angular-loading-spinner/angular-loading-spinner.js"></script>
 
 </head>
 

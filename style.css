@@ -29,6 +29,16 @@ body {
 	-webkit-transition: all 0.3s 0.3s ease-out;
 				transition: all 0.3s 0.3s ease-out;
 }
+.main-title > h1{
+		font-size: 5em;
+    text-transform: uppercase;
+    font-family: nunito;
+    font-weight: 800;
+		text-align: center;
+	}
+	.main-title h1 > span:first-child{
+		color: #fff;
+	}
 /*loader styling */
 .loader-wrapper{
   position: fixed;
